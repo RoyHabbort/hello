@@ -12,5 +12,7 @@
         },
         "classmap": ["App/"]
     },
-    "require": {}
+    "require": {
+        "php": "^7.1"
+    }
 }
