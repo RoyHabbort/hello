@@ -8,8 +8,17 @@ use \App\Services\MessageWriter\Messages\DefaultMessage;
 use \App\Services\MessageWriter\Messages\DatedMessage;
 use \App\Services\MessageWriter\Messages\CompanyMessage;
 
+
+$outputFilePath = __DIR__ . "/outputs/testfile";
+
+$fileOutputer = new \App\Services\MessageOutput\FileOutput();
+$fileOutputer->setOutputFilePath($outputFilePath);
+
 $message = new DefaultMessage("Hello world", "Oleg");
-$messageWriter = new MessageWriter();
+$messageWriter = new MessageWriter(
+    new \App\Services\MessageFormatter\SimpleFormat(),
+    $fileOutputer
+);
 $messageWriter->write($message);
 
 $anonymousContent = "Dear friend,
