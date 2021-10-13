@@ -7,7 +7,7 @@ use App\Services\MessageOutput\MessageOutputException;
 use App\Services\MessageOutput\MessageOutputInterface;
 use App\Services\MessageWriter\Messages\MessageInterface;
 
-class MessageWriter
+class MessageWriter implements MessageWriterInterface
 {
 
     const STATUS_SUCCESS = "SUCCESS";

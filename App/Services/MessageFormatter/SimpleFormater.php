@@ -2,10 +2,9 @@
 
 namespace App\Services\MessageFormatter;
 
-use App\Interfaces\DatedInterface;
 use App\Services\MessageWriter\Messages\MessageInterface;
 
-class SimpleFormat implements MessageFormatterInterface
+class SimpleFormater implements MessageFormatterInterface
 {
 
     public function format(MessageInterface $message): string
